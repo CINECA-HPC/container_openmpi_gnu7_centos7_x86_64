@@ -33,6 +33,8 @@ export PYTHONPATH=/opt/rh/devtoolset-7/root/usr/lib64/python$pythonvers/site-pac
 gcc --version
 
 ############# OpenMPI 2.1.1 installation #############
+cd /
+mkdir tmpdir
 cd /tmpdir
 wget https://download.open-mpi.org/release/open-mpi/v2.1/openmpi-2.1.1.tar.gz
 tar -xvf  openmpi-2.1.1.tar.gz
