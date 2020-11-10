@@ -4,13 +4,58 @@ IncludeCmd: yes
 
 %post
 
-yum install -y epel-release
-yum -y install wget vim which curl tar gzip
+yum -y install epel-release 
 yum -y groupinstall "Development tools"
-yum -y install binutils
-yum -y install dapl dapl-utils ibacm infiniband-diags libibverbs libibverbs-devel libibverbs-utils libmlx4 librdmacm librdmacm-utils mstflint opensm-libs perftest qperf rdma
-
-yum -y install scl-utils
+yum -y install                   python36 
+yum -y install                   python3-pip 
+yum -y install                   python3-devel 
+yum -y install                   bzip2  
+yum -y install                   gzip 
+yum -y install                   tar 
+yum -y install                   zip 
+yum -y install                   unzip 
+yum -y install                   xz 
+yum -y install                   curl 
+yum -y install                   wget 
+yum -y install                   vim 
+yum -y install                   patch 
+yum -y install                   make 
+yum -y install                   cmake 
+yum -y install                   file 
+yum -y install                   git 
+yum -y install                   which 
+yum -y install                   gcc-c++ 
+yum -y install                   perl-Data-Dumper 
+yum -y install                   perl-Thread-Queue 
+yum -y install                   boost-devel 
+yum -y install                   openssl
+yum  -y install                libibverbs-devel 
+yum  -y install                rdma-core-devel 
+yum  -y install                openssl-devel 
+yum  -y install                binutils 
+yum  -y install                dapl 
+yum  -y install                dapl-utils 
+yum  -y install                ibacm 
+yum  -y install                infiniband-diags 
+yum  -y install                libibverbs 
+yum  -y install                libibverbs-utils 
+yum  -y install                libmlx4 
+yum  -y install                librdmacm 
+yum  -y install                librdmacm-utils 
+yum  -y install                mstflint 
+yum  -y install                opensm-libs 
+yum  -y install                perftest 
+yum  -y install                qperf 
+yum  -y install                rdma 
+yum  -y install                libjpeg-turbo-devel 
+yum  -y install                libpng-devel 
+yum  -y install                openssh-clients 
+yum  -y install                openssh-server 
+yum  -y install                subversion 
+yum  -y install                libffi 
+yum  -y install                libffi-devel 
+yum  -y install                scl-utils
+yum -y install libpsm2 libpsm2-devel pmix pmix-devel
 yum -y install centos-release-scl
 yum -y install devtoolset-7-toolchain
 
@@ -40,7 +85,7 @@ wget https://download.open-mpi.org/release/open-mpi/v2.1/openmpi-2.1.1.tar.gz
 tar -xvf  openmpi-2.1.1.tar.gz
 rm openmpi-2.1.1.tar.gz
 cd openmpi-2.1.1
-./configure --prefix=/usr/local/openmpi --disable-getpwuid --with-memory-manager=none \
+./configure --prefix=/usr/local/openmpi --disable-getpwuid --with-psm2=yes --with-memory-manager=none \
 --enable-static=yes --with-pmix --enable-shared --with-verbs --enable-mpirun-prefix-by-default \
 --disable-dlopen --enable-wrapper-rpath=no --enable-wrapper-runpath=no
 
