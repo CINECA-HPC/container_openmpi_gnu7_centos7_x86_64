@@ -40,7 +40,7 @@ wget https://download.open-mpi.org/release/open-mpi/v2.1/openmpi-2.1.1.tar.gz
 tar -xvf  openmpi-2.1.1.tar.gz
 rm openmpi-2.1.1.tar.gz
 cd openmpi-2.1.1
-./configure --prefix=/usr/local/openmpi --disable-getpwuid --with-psm2=yes --with-memory-manager=none \
+./configure --prefix=/usr/local/openmpi --disable-getpwuid --with-memory-manager=none \
 --enable-static=yes --with-pmix --enable-shared --with-verbs --enable-mpirun-prefix-by-default \
 --disable-dlopen --enable-wrapper-rpath=no --enable-wrapper-runpath=no
 
