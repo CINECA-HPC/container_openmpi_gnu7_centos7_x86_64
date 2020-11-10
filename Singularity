@@ -60,7 +60,6 @@ yum -y install centos-release-scl
 yum -y install devtoolset-7-toolchain
 
 # LOAD GNU 7.3.1
-
 # General environment variables
 export PATH=/opt/rh/devtoolset-7/root/usr/bin${PATH:+:${PATH}}
 export MANPATH=/opt/rh/devtoolset-7/root/usr/share/man:${MANPATH}
