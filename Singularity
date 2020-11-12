@@ -4,60 +4,13 @@ IncludeCmd: yes
 
 %post
 
-yum -y install epel-release 
-yum -y groupinstall "Development tools"
-yum -y install                   python36 
-yum -y install                   python3-pip 
-yum -y install                   python3-devel 
-yum -y install                   bzip2  
-yum -y install                   gzip 
-yum -y install                   tar 
-yum -y install                   zip 
-yum -y install                   unzip 
-yum -y install                   xz 
-yum -y install                   curl 
-yum -y install                   wget 
-yum -y install                   vim 
-yum -y install                   patch 
-yum -y install                   make 
-yum -y install                   cmake 
-yum -y install                   file 
-yum -y install                   git 
-yum -y install                   which 
-yum -y install                   gcc-c++ 
-yum -y install                   perl-Data-Dumper 
-yum -y install                   perl-Thread-Queue 
-yum -y install                   boost-devel 
-yum -y install                   openssl
-yum  -y install                libibverbs-devel 
-yum  -y install                rdma-core-devel 
-yum  -y install                openssl-devel 
-yum  -y install                binutils 
-yum  -y install                dapl 
-yum  -y install                dapl-utils 
-yum  -y install                ibacm 
-yum  -y install                infiniband-diags 
-yum  -y install                libibverbs 
-yum  -y install                libibverbs-utils 
-yum  -y install                libmlx4 
-yum  -y install                librdmacm 
-yum  -y install                librdmacm-utils 
-yum  -y install                mstflint 
-yum  -y install                opensm-libs 
-yum  -y install                perftest 
-yum  -y install                qperf 
-yum  -y install                rdma 
-yum  -y install                libjpeg-turbo-devel 
-yum  -y install                libpng-devel 
-yum  -y install                openssh-clients 
-yum  -y install                openssh-server 
-yum  -y install                subversion 
-yum  -y install                libffi 
-yum  -y install                libffi-devel 
-yum  -y install                scl-utils
-yum -y install libpsm2 libpsm2-devel pmix pmix-devel
-yum -y install centos-release-scl
-yum -y install devtoolset-7-toolchain
+yum install -y epel-release
+yum groupinstall -y "Development tools"
+yum install -y python36 python3-pip python3-devel bzip2 gzip tar zip unzip xz curl wget vim patch make cmake file git which gcc-c++ perl-Data-Dumper
+yum install -y perl-Thread-Queue boost-devel openssl libibverbs-devel rdma-core-devel openssl-devel binutils dapl dapl-utils ibacm infiniband-diags
+yum install -y libibverbs libibverbs-utils libmlx4 librdmacm librdmacm-utils mstflint opensm-libs perftest qperf rdma libjpeg-turbo-devel libpng-devel
+yum install -y openssh-clients openssh-server subversion libffi libffi-devel scl-utils libpsm2 libpsm2-devel pmix pmix-devel centos-release-scl
+yum install -y devtoolset-7-toolchain
 
 # LOAD GNU 7.3.1
 # General environment variables
